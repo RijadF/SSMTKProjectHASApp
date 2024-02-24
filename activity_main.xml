@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:use_controller="true" />
+
+    <!-- NET PART ISPIS, ispisuje na bottom -->
+    <TextView
+        android:id="@+id/signal_strength_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="7dp"
+        android:textStyle="bold"/>
+
+
+    <!-- EXO PART ISPIS-->
+
+    <!--    TEXT VIEW FOR BITRATE VALUE-->
+    <TextView
+        android:id="@+id/bitrateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="7dp"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR BITRATE FROM MPD VALUE-->
+    <TextView
+        android:id="@+id/bitrateFromMpdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/bitrateTextView"
+        app:layout_constraintStart_toStartOf="@id/bitrateTextView"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR RESOLUTION VALUE-->
+    <TextView
+        android:id="@+id/resolutionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/bitrateFromMpdTextView"
+        app:layout_constraintStart_toStartOf="@id/bitrateFromMpdTextView"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR RESOLUTION MPD VALUE-->
+    <TextView
+        android:id="@+id/rezolucijaMpdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/resolutionTextView"
+        app:layout_constraintStart_toStartOf="@id/resolutionTextView"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR REBUFFERING SIZE VALUE-->
+    <TextView
+        android:id="@+id/rebufferingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/rezolucijaMpdTextView"
+        app:layout_constraintStart_toStartOf="@id/rezolucijaMpdTextView"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR SEGMENT SIZE DURATION VALUE-->
+    <TextView
+        android:id="@+id/segmentSizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/rebufferingTextView"
+        app:layout_constraintStart_toStartOf="@id/rebufferingTextView"
+        android:textStyle="bold"/>
+
+    <!--    TEXT VIEW FOR CURRENT STATE VALUE-->
+    <TextView
+        android:id="@+id/currentStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="start|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/segmentSizeTextView"
+        app:layout_constraintStart_toStartOf="@id/segmentSizeTextView"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
